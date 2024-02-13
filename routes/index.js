@@ -86,6 +86,9 @@ router.get("/signup",(req,res)=>{
     res.render("signUp",{ message: '' })
 })
 
+router.get("/",(req,res)=>{
+    res.render("signin",{ message: '' })
+})
 
 router.get("/signin",(req,res)=>{
     res.render("signin",{ message: '' })
