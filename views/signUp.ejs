@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherApp</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body class="signIn">
+ <div class="wrapper">
+  <form action="/signup" method="post">
+    <h1>Register</h1>
+    <div class="input-box">
+      <input type="text" placeholder="Username" name="username" required>
+      <i class="bx bxs-user"></i>
+    </div>
+    <div class="input-box">
+      <input placeholder="Password" name="password" type="password" required>
+      <i class="bx bxs-lock-alt"></i>
+    </div>
+    <div class="input-box">
+      <input placeholder="Password" name="password2" type="password" required>
+      <i class="bx bxs-lock-alt"></i>
+      <% if (message) { %>
+        <p class="message"><%= message %></p>
+    <% } %>
+    </div>
+    <button type="submit" class="btn">Register</button>
+    <div class="register-link">
+      <p>Already have an account? <a href="/signin">Login</a></p>
+    </div>
+  </form>
+ </div>
+ <script src="/javascripts/index.js"></script>
+</body>
+</html>
